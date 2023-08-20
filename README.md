@@ -22,7 +22,7 @@ npm run serve
 npm run build
 ```
 
-###PHP部署
+### PHP部署
 ```
 直接放到配置有PHP的Apache或者Nginx服务器中
 ```
