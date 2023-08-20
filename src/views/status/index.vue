@@ -3,9 +3,14 @@
  -->
 <template>
   <div>
-    <span style="margin-right: 50px;">服务器总数:{{ queryList.length }}</span>
-    <span style="margin-right: 50px;">服务器最大人数总和:{{ serverPlayerNumMax }}</span>
-    <span>当前在线人数:{{ serverPlayerNum }}</span>
+    <div style="display: flex;justify-content: space-between;">
+      <div style="line-height: 40px;">
+        <span style="margin-right: 50px;">服务器总数:{{ queryList.length }}</span>
+        <span style="margin-right: 50px;">服务器最大人数总和:{{ serverPlayerNumMax }}</span>
+        <span>当前在线人数:{{ serverPlayerNum }}</span>
+      </div>
+    <el-button type="primary" @click="getQueryAll()">刷新</el-button>
+    </div>
     <el-table
         :data="queryList"
         style="width: 100%">
@@ -76,6 +81,7 @@ export default {
   },
   methods: {
     async getQueryAll () { // 查询所有服务器
+      this.queryList = []
       this.serverPlayerNum = 0
       this.serverPlayerNumMax = 0
       for (let i = 0; i < this.ServerList.length; i++) {
@@ -97,7 +103,6 @@ export default {
     },
     QueryIng () { // 25秒刷新数据
       this.timer = setInterval(() => {
-        this.queryList = []
         this.getQueryAll()
       }, 25000)
     },
