@@ -1,5 +1,5 @@
 # Xash服务器状态查询
-#### By Drive Konght
+#### By Drive Konght (马叉虫、HatsuneMiko)
 #### QQ:745483318
 
 ## 如何部署?
@@ -20,6 +20,11 @@ npm run serve
 ### 打包,然后把dist文件夹中的内容丢进服务器
 ```
 npm run build
+```
+
+###PHP部署
+```
+直接放到配置有PHP的Apache或者Nginx服务器中
 ```
 
 
