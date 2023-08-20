@@ -1,3 +1,6 @@
+<!--
+  作者:Drive Kinght（马叉虫、HatsuneMiko）
+ -->
 <template>
   <div>
     <span style="margin-right: 50px;">服务器总数:{{ queryList.length }}</span>

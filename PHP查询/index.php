@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!--
+  作者:Drive Kinght（马叉虫、HatsuneMiko）
+  QQ：745483318
+-->
 <meta charset="utf-8">
 <title>Xash服务器查询</title>
 <!-- CDN引入vue -->

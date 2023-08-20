@@ -1,3 +1,7 @@
+/*
+  作者:Drive Kinght（马叉虫、HatsuneMiko）
+  QQ：745483318
+*/
 const ServerList = [
   { area: '华东', ds_ip: '1.13.245.142', ds_port: '37015' }, // 8v8
   { area: '华东', ds_ip: '1.13.245.142', ds_port: '37016' }, // 8v8AKM4
