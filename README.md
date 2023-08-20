@@ -1,6 +1,6 @@
 # Xash服务器状态查询
 ### 点个小星星吧: )
-#### By Drive Konght (马叉虫、HatsuneMiko)
+#### By Drive Kinght (马叉虫、HatsuneMiko)
 #### QQ:745483318
 
 ## 如何部署?
