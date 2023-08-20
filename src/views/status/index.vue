@@ -9,7 +9,7 @@
         <span style="margin-right: 50px;">服务器最大人数总和:{{ serverPlayerNumMax }}</span>
         <span>当前在线人数:{{ serverPlayerNum }}</span>
       </div>
-    <el-button type="primary" @click="getQueryAll()">刷新</el-button>
+      <el-button type="primary" v-throttle="2000" @click="getQueryAll()">刷新</el-button>
     </div>
     <el-table
         :data="queryList"
