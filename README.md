@@ -21,3 +21,11 @@ npm run serve
 ```
 npm run build
 ```
+
+
+
+## 预览
+
+![1](效果图\1.png)
+
+![1](效果图\2.png)
