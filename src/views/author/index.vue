@@ -6,7 +6,8 @@
   <div>
     <h3 style="color:red">Drive Kinght</h3>
     <p style="color:#66ccff">QQ：745483318</p>
-    <el-link href="https://github.com/HatsuneMiko/queryxashds.git" target="_blank" type="primary">站点源码仓库地址</el-link>
+    <el-link href="https://github.com/HatsuneMiko/queryxashds.git" target="_blank" type="primary">站点开源仓库地址</el-link>
+    <p style="color:#66ccff">更新日期:2023.08.20</p>
   </div>
 </template>
 
