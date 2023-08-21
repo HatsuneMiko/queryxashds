@@ -73,7 +73,7 @@ export default {
       serverPlayerNum: 0, // 服务玩家总和
       serverPlayerNumMax: 0, // 服务器玩家最大人数总和
       timer: null, // 定时器
-      queryFlag: false // 判断是否查询完
+      queryFlag: true // 判断是否查询完
     }
   },
   async mounted () {
