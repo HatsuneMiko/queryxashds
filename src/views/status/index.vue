@@ -1,7 +1,7 @@
 <!--
   作者:Drive Kinght（马叉虫、HatsuneMiko）
  -->
-<template>
+ <template>
   <div>
     <div style="display: flex;justify-content: space-between;">
       <div style="line-height: 40px;">
@@ -72,7 +72,8 @@ export default {
       queryList: [], // 查询结果列表
       serverPlayerNum: 0, // 服务玩家总和
       serverPlayerNumMax: 0, // 服务器玩家最大人数总和
-      timer: null // 定时器
+      timer: null, // 定时器
+      queryFlag: false // 判断是否查询完
     }
   },
   async mounted () {
@@ -81,6 +82,10 @@ export default {
   },
   methods: {
     async getQueryAll () { // 查询所有服务器
+      if (this.queryFlag === false) {
+        return
+      }
+      this.queryFlag = false
       this.queryList = []
       this.serverPlayerNum = 0
       this.serverPlayerNumMax = 0
@@ -93,6 +98,7 @@ export default {
         res.data.area = this.ServerList[i].area
         this.queryList.push(res.data)
       }
+      this.queryFlag = true
     },
     async getQueryStatus (ip, port) { // 服务器查询
       const res = await getStatus8V8({
