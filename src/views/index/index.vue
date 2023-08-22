@@ -51,7 +51,6 @@ export default {
   },
   methods: {
     handleClick (tab, event) {
-      // console.log('导航', tab, event)
     }
   }
 }
