@@ -114,6 +114,9 @@ export default {
     },
     fontColorShow (name) { // 符号渲染彩色的处理函数
       return name.replace(/\^[1-9]/g, function (e) {
+        if (e === '^0') {
+          return '<span style="color:black">'
+        }
         if (e === '^1') {
           return '<span style="color:red">'
         }
