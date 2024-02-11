@@ -31,8 +31,8 @@ npm run build
 
 
 ## 效果图
-![在线图1](http://cstrike.online:4396/GitHubIMG/1.png)
-![在线图2](http://cstrike.online:4396/GitHubIMG/2.png)
+![在线图1](http://8.210.45.36:4396/GitHubIMG/1.png)
+![在线图2](http://8.210.45.36:4396/GitHubIMG/2.png)
 
 ![1](效果图\1.png)
 
