@@ -77,7 +77,7 @@ class Rcon
                 //Get detailed player info via rcon
                 function ServerInfo()
                 {
-                                $command  = "\xff\xff\xff\xffnetinfo 48 0 4";
+                                $command  = "\xff\xff\xff\xffnetinfo 49 0 4";
                                 $buffer   = $this->Communicate($command);
                                 //If there is no open connection return false
                                 if (!$this->connected)
@@ -158,7 +158,7 @@ class Rcon
                                 //return formatted result
                                 return $result;
                 } //function ServerMaps()
-                //Get server info via info protocol
+                //通过信息协议获取服务器信息
 
                 function Info()
                 {
@@ -228,7 +228,7 @@ class Rcon
                                 return $result;
                 }
 
-                //Get players via info protocoll
+                //通过信息协议获取玩家
                 function Players()
                 {
                                 //get players online
@@ -242,7 +242,7 @@ class Rcon
                                                 return $this->connected;
 
                                 //send players command
-                                $command = "\xff\xff\xff\xffnetinfo 48 0 3";
+                                $command = "\xff\xff\xff\xffnetinfo 49 0 3";
                                 $buffer  = $this->Communicate($command);
 
                                 //If there is no open connection return false
