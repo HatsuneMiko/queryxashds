@@ -17,7 +17,10 @@
         style="width: 100%">
         <el-table-column type="expand">
           <template #default="scope">
-              <span style="margin-left: 10%;">服务器地址：</span><span>{{ scope.row.ip }}:{{ scope.row.port }}</span>
+              <span style="margin-left: 10%;">服务器地址：</span>
+              <span>{{ scope.row.ip }}:{{ scope.row.port }}</span>
+              <span style="margin-left: 50%;">复制连接命令&nbsp;&nbsp;</span>
+              <span><el-button type="primary" icon="el-icon-document-copy" @click=doCopy(scope.row.ip,scope.row.port) circle></el-button></span>
           </template>
         </el-table-column>
         <el-table-column
@@ -95,6 +98,7 @@ export default {
         // console.log(i, '服务器查询', res.data)
         if (res.data === '') continue
         this.serverPlayerNum += Number(res.data.activeplayers)
+        // this.serverPlayerNum += Number(res.data.activeplayers) - this.ServerList[i].bot // 人数=查询到的人数-bot
         this.serverPlayerNumMax += Number(res.data.maxplayers)
         res.data.area = this.ServerList[i].area
         this.queryList.push(res.data)
@@ -114,7 +118,7 @@ export default {
       }, 25000)
     },
     fontColorShow (name) { // 符号渲染彩色的处理函数
-      return name.replace(/\^[1-9]/g, function (e) {
+      return name.replace(/\^[0-9]/g, function (e) {
         if (e === '^0') {
           return '<span style="color:black">'
         }
@@ -145,6 +149,22 @@ export default {
         if (e === '^9') {
           return '<span style="color:red">'
         }
+      })
+    },
+    doCopy (ip, port) {
+      var copyTest = `connect ${ip}:${port}`
+      var inputTest = document.createElement('input')
+      inputTest.setAttribute('readonly', '')
+      inputTest.value = copyTest
+      document.body.appendChild(inputTest)
+      inputTest.select()
+      document.execCommand('Copy')
+      inputTest.className = 'oInput'
+      inputTest.style.display = 'none'
+      this.$message({
+        showClose: true,
+        message: '复制成功!',
+        type: 'success'
       })
     }
   }
